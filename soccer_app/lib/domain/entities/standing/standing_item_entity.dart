@@ -1,6 +1,6 @@
 import 'package:meta/meta.dart';
 
-import 'team_matches_entity.dart';
+import 'standing_team_matches_entity.dart';
 
 class StandingItemEntity {
   final int rank;
@@ -11,9 +11,9 @@ class StandingItemEntity {
   final String forme;
   final String status;
   final String description;
-  final TeamMatchesEntity all;
-  final TeamMatchesEntity home;
-  final TeamMatchesEntity away;
+  final List<TeamMatchesEntity> all;
+  final List<TeamMatchesEntity> home;
+  final List<TeamMatchesEntity> away;
 
   StandingItemEntity({
     @required this.rank,
@@ -22,7 +22,7 @@ class StandingItemEntity {
     @required this.logoUrl,
     @required this.group,
     @required this.forme,
-    @required this.status,
+    this.status,
     @required this.description,
     @required this.all,
     @required this.home,
